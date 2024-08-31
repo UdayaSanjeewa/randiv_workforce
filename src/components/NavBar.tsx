@@ -15,9 +15,9 @@ function NavBar() {
       {/* Nav Links */}
       <div className="flex w-[476px] justify-between text-[20px] font-[700]">
         <Link href="/">Home</Link>
-        <Link href="/AboutUs">About us</Link>
+        <Link href="/AboutUs">About Us</Link>
         <Link href="/Portfolio">Portfolio</Link>
-        <Link href="/ContactUs">Contact us</Link>
+        <Link href="/ContactUs">Contact Us</Link>
       </div>
     </div>
   );
