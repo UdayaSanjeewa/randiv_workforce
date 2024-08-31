@@ -1,6 +1,6 @@
 import Image from "next/image";
 import React from "react";
-import logo from "@/resources/logo.jpg";
+import logo from "@/resources/rv-logo.jpeg";
 import Link from "next/link";
 
 function NavBar() {
