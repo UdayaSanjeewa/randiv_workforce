@@ -22,7 +22,7 @@ function HeroSection() {
           <p className="w-[734px] h-[192px] text-[22px] font-[400] mt-[50px]">
             At Randiv Work Force, we specialize in bridging the gap between
             skilled professionals and global employment opportunities. Whether
-            you'rea dedicated nurse orCare Giver lookingto make a difference in
+            you area dedicated nurse orCare Giver lookingto make a difference in
             UK Care Homes/Hospitals or an ambitious professional eager to
             explore opportunities in Japan, New Zealand, or across Europe, we
             are here to make your dreams a reality
