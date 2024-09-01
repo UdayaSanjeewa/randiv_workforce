@@ -8,39 +8,44 @@ function ContactUs() {
     <>
       <NavBar />
 
-      <div className="flex justify-center">
+      <div className="flex flex-col lg:flex-row justify-center items-center lg:items-start gap-10 px-4 mt-10 lg:mt-[100px]">
         {/* Heading and form */}
-        <div className="w-[1000px] h-[1300px] mt-[100px]">
+        <div className="w-full max-w-[1000px] h-auto lg:h-[1300px]">
           {/* heading */}
-          <div className="w-[483px] h-[78px] mb-[80px] bg-[#50B2E3] text-[40px] font-[700] flex items-center justify-center text-white rounded-[12px]">
-            <p> Contact Us </p>
+          <div className="w-full max-w-[483px] h-auto lg:h-[78px] mb-10 lg:mb-[80px] bg-[#50B2E3] text-[28px] md:text-[32px] lg:text-[40px] font-[700] flex items-center justify-center text-white rounded-[12px] py-4 lg:py-0 mx-auto lg:mx-0">
+            <p>Contact Us</p>
           </div>
+
           {/* Form */}
-          <div className="w-[708px]  h-[800px] shadow-2xl">
-            <h2 className="text-[32px] text-center font-[700] text-[#21215F] p-[30px]">
-              Inquaries
+          <div className="w-full max-w-[708px] h-auto lg:h-[800px] shadow-2xl mx-auto lg:mx-0">
+            <h2 className="text-[28px] md:text-[32px] text-center font-[700] text-[#21215F] p-[30px]">
+              Inquiries
             </h2>
             <ContactForm />
           </div>
         </div>
 
-        {/* contact */}
+        {/* Contact Information */}
+        <div className="flex flex-col gap-6 lg:gap-10 w-full max-w-[400px] lg:mt-[280px]">
+          <div>
+            <p className="text-[22px] md:text-[26px] font-[700]">Address</p>
+            <p className="text-[18px] md:text-[22px] font-[400] mt-2">
+              Randiv WorkforceForeign Employment <br />
+              Solution(pvt) ltd no 104, <br />
+              3rd floor, <br />
+              Sanasa Ward City, <br />
+              Queen Marry Road, Gampaha, <br />
+              Sri Lanka.
+            </p>
+          </div>
 
-        <div className="flex flex-col gap-10 mt-[280px]">
-          <p className="text-[26px] font-[700]">Address</p>
-          <p className="text-[22px] font-[400]">
-            Randiv WorkforceForeign Employment
-            <br /> Solution(pvt) ltd no 104, <br />
-            3rd floor, <br />
-            Sanasa Ward City, <br />
-            Queen Marry Road, Gampaha, <br />
-            Sri Lanka.
-          </p>
-          <p className="text-[26px] font-[700]">Contact Numbers</p>
-          <ul className="text-[22px] font-[400] list-disc ml-5">
-            <li>077 374 1720</li>
-            <li>0332 320 490</li>
-          </ul>
+          <div className="mb-20">
+            <p className="text-[22px] md:text-[26px] font-[700]">Contact Numbers</p>
+            <ul className="text-[18px] md:text-[22px] font-[400] list-disc ml-5 mt-2">
+              <li>077 374 1720</li>
+              <li>0332 320 490</li>
+            </ul>
+          </div>
         </div>
       </div>
 
