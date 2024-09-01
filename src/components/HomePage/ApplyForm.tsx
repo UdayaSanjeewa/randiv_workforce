@@ -9,104 +9,110 @@ function ApplyForm() {
         src={formBg}
         alt="Form Background"
         layout="fill"
-        className="z-[-1] opacity-[85%]"
+        className="z-[-1] opacity-[85%] object-cover hidden md:block "
       />
 
-      <div className="absolute inset-0 w-full flex items-center justify-center">
-        <div className="w-[833px] h-[880px] flex flex-col justify-between items-center">
+      <div className="absolute inset-0 w-full flex items-center justify-center p-4">
+        <div className="w-full max-w-[833px] flex flex-col justify-between items-center">
           {/* Heading */}
-          <div className="w-[341px] h-[84px] rounded-[20px] bg-white flex items-center justify-center">
-            <p className="text-[#21215F] text-[45px] font-[700] ">Apply Form</p>
+          <div className="w-full max-w-[341px] h-auto rounded-[20px] bg-white flex items-center justify-center py-4">
+            <p className="text-[#21215F] text-[28px] md:text-[35px] lg:text-[45px] font-[700]">Apply Form</p>
           </div>
 
           {/* Form */}
-          <div className="w-[833px] h-[735px] rounded-[12px] bg-white">
+          <div className="w-full max-w-[833px] bg-white rounded-[12px] mt-8 p-6 md:p-10 lg:p-12">
             <form action="">
-              {/* name and gender container */}
-              <div className="flex justify-evenly mt-[50px]">
-                {/* name */}
-                <div className="flex flex-col">
+              {/* Name and Gender Container */}
+              <div className="flex flex-col md:flex-row  justify-between md:space-x-4">
+                {/* Name */}
+                <div className="flex flex-col mb-4 md:mb-0">
                   <label
-                    htmlFor=""
-                    className="text-[19px] font-[700] text-[#21215F] m-2"
+                    htmlFor="name"
+                    className="text-[19px] font-[700] text-[#21215F] mb-2"
                   >
                     Your Name
                   </label>
                   <input
+                    id="name"
                     type="text"
                     placeholder="Name"
-                    className="w-[313px] h-[61px] rounded-[15px] bg-[#D0DBE166] pl-[20px] font-[400] text-[16px]"
+                    className="w-full md:w-[320px] h-[61px] rounded-[15px] bg-[#D0DBE166] pl-[20px] font-[400] text-[16px]"
                   />
                 </div>
 
                 {/* Gender */}
-                <div className="flex flex-col">
+                <div className="flex flex-col mb-4 md:mb-0">
                   <label
-                    htmlFor=""
-                    className="text-[19px] font-[700] text-[#21215F] m-2"
+                    htmlFor="gender"
+                    className="text-[19px] font-[700] text-[#21215F] mb-2"
                   >
                     Gender
                   </label>
                   <input
+                    id="gender"
                     type="text"
                     placeholder="Gender"
-                    className="w-[313px] h-[61px] rounded-[15px] bg-[#D0DBE166] pl-[20px] font-[400] text-[16px]"
+                    className="w-full md:w-[320px]  h-[61px] rounded-[15px] bg-[#D0DBE166] pl-[20px] font-[400] text-[16px]"
                   />
                 </div>
               </div>
 
-              {/* Phone number */}
-              <div className="w-[692px] h-[99px] mt-[30px] ml-[70px]">
+              {/* Phone Number */}
+              <div className="flex flex-col mt-[30px]">
                 <label
-                  htmlFor=""
-                  className="text-[19px] font-[700] text-[#21215F] m-2"
+                  htmlFor="phone"
+                  className="text-[19px] font-[700] text-[#21215F] mb-2"
                 >
                   Phone Number
                 </label>
                 <input
+                  id="phone"
                   type="text"
                   placeholder="Phone Number"
-                  className="w-[692px] h-[61px] rounded-[15px] bg-[#D0DBE166] pl-[20px] font-[400] text-[16px]"
+                  className="w-full h-[61px] rounded-[15px] bg-[#D0DBE166] pl-[20px] font-[400] text-[16px]"
                 />
               </div>
 
-              {/* exp */}
-              <div className="w-[692px] h-[99px] mt-[30px] ml-[70px]">
+              {/* Working Experience */}
+              <div className="flex flex-col mt-[30px]">
                 <label
-                  htmlFor=""
-                  className="text-[19px] font-[700] text-[#21215F] m-2"
+                  htmlFor="experience"
+                  className="text-[19px] font-[700] text-[#21215F] mb-2"
                 >
                   Working Experience
                 </label>
                 <input
+                  id="experience"
                   type="text"
                   placeholder="Working Experience"
-                  className="w-[692px] h-[61px] rounded-[15px] bg-[#D0DBE166] pl-[20px] font-[400] text-[16px]"
+                  className="w-full h-[61px] rounded-[15px] bg-[#D0DBE166] pl-[20px] font-[400] text-[16px]"
                 />
               </div>
 
-
-              {/* message */}
-              <div className="w-[692px] h-[169px] mt-[30px] ml-[70px]">
+              {/* Message */}
+              <div className="flex flex-col mt-[30px]">
                 <label
-                  htmlFor=""
-                  className="text-[19px] font-[700] text-[#21215F] m-2"
+                  htmlFor="message"
+                  className="text-[19px] font-[700] text-[#21215F] mb-2"
                 >
                   Message
                 </label>
-                <textarea id=""
+                <textarea
+                  id="message"
                   placeholder="Message"
-                  className="w-[692px] h-[131px] rounded-[15px] bg-[#D0DBE166] pl-[20px] pt-[20px] font-[400] text-[16px]"
+                  className="w-full h-[131px] rounded-[15px] bg-[#D0DBE166] pl-[20px] pt-[20px] font-[400] text-[16px]"
                 />
               </div>
 
-            <div className="w-full flex items-center justify-center mt-[30px]">
-                {/* Submit */}
-                <div className=" flex items-center justify-center">
-                    <button type="submit" className="w-[258px] h-[53px] rounded-[15px] bg-[#50B2E3] text-white text-[20px] font-[700]">SUBMIT</button>
-                </div>
-            </div>
-
+              {/* Submit Button */}
+              <div className="w-full flex items-center justify-center mt-[30px]">
+                <button
+                  type="submit"
+                  className="w-full max-w-[258px] h-[53px] rounded-[15px] bg-[#50B2E3] text-white text-[20px] font-[700]"
+                >
+                  SUBMIT
+                </button>
+              </div>
             </form>
           </div>
         </div>
