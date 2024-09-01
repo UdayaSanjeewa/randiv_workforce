@@ -1,12 +1,12 @@
 import React from "react";
 import Image from "next/image";
-import Hero from "@/resources/hero-bg.png";
+import Hero from "@/resources/Hero.jpg";
 
 function HeroSection() {
   return (
     <div className="">
       {/* Hero section */}
-      <div className="h-[556px] relative">
+      <div className="h-[600px] relative">
         <Image
           src={Hero}
           alt="Hero Background"
