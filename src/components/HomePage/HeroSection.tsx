@@ -6,7 +6,7 @@ function HeroSection() {
   return (
     <div className="">
       {/* Hero section */}
-      <div className="h-[300px] md:h-[450px] xl:h-[600px] relative">
+      <div className="h-[250px] md:h-[450px] xl:h-[600px] relative">
         <Image
           src={Hero}
           alt="Hero Background"

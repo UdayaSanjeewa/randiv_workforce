@@ -35,7 +35,7 @@ function Footer() {
       </div>
 
       {/* Contact */}
-      <div className="text-white flex flex-col gap-2 ml-[30px] md:ml-[60px] md:items-start md:text-left w-full md:w-[400px] h-[167px] xl:ml-[200px] md:mt-[34px]">
+      <div className="text-white flex flex-col gap-2 ml-[30px] md:ml-[60px] md:items-start md:text-left  md:w-[400px] h-[167px] xl:ml-[200px] md:mt-[34px]">
         <h2 className="text-[22px] font-[700] mb-4 md:mb-0">Contact</h2>
         <div className="flex  md:justify-start opacity-[70%] mb-2">
           <p>Email</p>
