@@ -3,95 +3,97 @@ import React from "react";
 function ContactForm() {
   return (
     <div>
-      <form action="">
-        {/* name and gender container */}
-        <div className="flex justify-evenly">
-          {/* name */}
-          <div className="flex flex-col">
+      <form action="" className="p-10">
+        {/* Name and Email container */}
+        <div className="flex flex-col md:flex-row justify-between gap-4 md:gap-8">
+          {/* Name */}
+          <div className="flex flex-col w-full md:w-[266px] lg:w-[300px]">
             <label
-              htmlFor=""
+              htmlFor="name"
               className="text-[19px] font-[700] text-[#21215F] m-2"
             >
               Your Name
             </label>
             <input
+              id="name"
               type="text"
               placeholder="Name"
-              className="w-[266px] h-[61px] rounded-[15px] bg-[#D0DBE166] pl-[20px] font-[400] text-[16px]"
+              className="w-full h-[61px] rounded-[15px] bg-[#D0DBE166] pl-[20px] font-[400] text-[16px]"
             />
           </div>
 
-          {/* Gender */}
-          <div className="flex flex-col">
+          {/* Email */}
+          <div className="flex flex-col w-full md:w-[266px] lg:w-[300px]">
             <label
-              htmlFor=""
+              htmlFor="email"
               className="text-[19px] font-[700] text-[#21215F] m-2"
             >
               Email
             </label>
             <input
+              id="email"
               type="email"
               placeholder="Email"
-              className="w-[266px] h-[61px] rounded-[15px] bg-[#D0DBE166] pl-[20px] font-[400] text-[16px]"
+              className="w-full h-[61px] rounded-[15px] bg-[#D0DBE166] pl-[20px] font-[400] text-[16px]"
             />
           </div>
         </div>
 
-        {/* Phone number */}
-        <div className="w-[588px] h-[99px] mt-[30px] ml-[70px]">
+        {/* Phone Number */}
+        <div className="w-full mt-[30px]">
           <label
-            htmlFor=""
+            htmlFor="phone"
             className="text-[19px] font-[700] text-[#21215F] m-2"
           >
             Phone Number
           </label>
           <input
+            id="phone"
             type="number"
             placeholder="Phone Number"
-            className="w-[588px] h-[61px] rounded-[15px] bg-[#D0DBE166] pl-[20px] font-[400] text-[16px]"
+            className="w-full h-[61px] rounded-[15px] bg-[#D0DBE166] pl-[20px] font-[400] text-[16px]"
           />
         </div>
 
-        {/* subject */}
-        <div className="w-[588px] h-[99px] mt-[30px] ml-[70px]">
+        {/* Subject */}
+        <div className="w-full mt-[30px]">
           <label
-            htmlFor=""
+            htmlFor="subject"
             className="text-[19px] font-[700] text-[#21215F] m-2"
           >
             Subject
           </label>
           <input
+            id="subject"
             type="text"
             placeholder="Subject"
-            className="w-[588px] h-[61px] rounded-[15px] bg-[#D0DBE166] pl-[20px] font-[400] text-[16px]"
+            className="w-full h-[61px] rounded-[15px] bg-[#D0DBE166] pl-[20px] font-[400] text-[16px]"
           />
         </div>
 
-        {/* message */}
-        <div className="w-[588px] h-[169px] mt-[30px] ml-[70px]">
+        {/* Message */}
+        <div className="w-full mt-[30px]">
           <label
-            htmlFor=""
+            htmlFor="message"
             className="text-[19px] font-[700] text-[#21215F] m-2"
           >
             Message
           </label>
           <textarea
-            id=""
+            id="message"
             placeholder="Message"
-            className="w-[588px] h-[131px] rounded-[15px] bg-[#D0DBE166] pl-[20px] pt-[20px] font-[400] text-[16px]"
+            className="w-full h-[131px] rounded-[15px] bg-[#D0DBE166] pl-[20px] pt-[20px] font-[400] text-[16px]"
           />
         </div>
 
+        {/* Submit */}
         <div className="w-full flex items-center justify-center mt-[30px]">
-          {/* Submit */}
-          <div className=" flex items-center justify-center">
-            <button
-              type="submit"
-              className="w-[258px] h-[53px] rounded-[15px] bg-[#50B2E3] text-white text-[20px] font-[700]"
-            >
-              SUBMIT
-            </button>
-          </div>
+          <button
+            type="submit"
+            className="w-full max-w-[258px] h-[53px] rounded-[15px] bg-[#50B2E3] text-white text-[20px] font-[700]"
+          >
+            SUBMIT
+          </button>
         </div>
       </form>
     </div>

@@ -1,12 +1,13 @@
 import Footer from "@/components/Footer";
 import NavBar from "@/components/NavBar";
-import Card from "@/components/ServicesPage/Card";
+import CardLG from "@/components/ServicesPage/Card";
 import Heading from "@/components/ServicesPage/Heading";
 import ServeOne from "@/resources/serveOne.jpg";
 import ServeTwo from "@/resources/serveTwo.jpg";
 import ServeThree from "@/resources/serveThree.jpg";
 import ServeFour from "@/resources/serveFour.jpg";
 import React from "react";
+import CardSM from "@/components/ServicesPage/CardSM";
 
 function Services() {
   let cardOne = {
@@ -69,11 +70,18 @@ function Services() {
 
       <div className="flex items-center justify-center flex-col gap-10">
 
-        <div className="w-[1200px]">
-        <Card {...cardOne} />
-        <Card {...cardTwo} />
-        <Card {...cardThree} />
-        <Card {...cardFour} />
+        <div className="w-[1200px] lg:block hidden">
+        <CardLG {...cardOne} />
+        <CardLG {...cardTwo} />
+        <CardLG {...cardThree} />
+        <CardLG {...cardFour} />
+        </div>
+
+        <div className="w-[1200px] lg:hidden">
+        <CardSM {...cardOne} />
+        <CardSM {...cardTwo} />
+        <CardSM {...cardThree} />
+        <CardSM {...cardFour} />
         </div>
 
       </div>
