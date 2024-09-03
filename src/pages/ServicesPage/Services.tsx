@@ -77,7 +77,7 @@ function Services() {
         <CardLG {...cardFour} />
         </div>
 
-        <div className="w-[1200px] lg:hidden">
+        <div className="lg:hidden">
         <CardSM {...cardOne} />
         <CardSM {...cardTwo} />
         <CardSM {...cardThree} />
