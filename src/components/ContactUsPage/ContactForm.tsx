@@ -1,9 +1,42 @@
-import React from "react";
+"use client";
+import axios from "axios";
+import { useRouter } from "next/navigation";
+import React, { useState } from "react";
+import { toast } from "react-toastify";
 
 function ContactForm() {
+  const router = useRouter()
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [phoneNumber, setPhoneNumber] = useState("");
+  const [subject, setSubject] = useState("");
+  const [message, setMessage] = useState("");
+
+  const sendMail = async (e: any) => {
+    e.preventDefault();
+    const data = {
+      name,
+      email,
+      phoneNumber,
+      subject,
+      message,
+    };
+
+    await axios.post("/api/sendmail", data).then((res) => {
+      if (res.data.message) {
+        toast.success("Inquiry Sent Successfully");
+        setTimeout(()=>{
+          router.push('/')          
+        }, 300)
+      } else {
+        toast.success("Inquiry Sending failed, Try again later");
+      }
+    });
+  };
+
   return (
     <div>
-      <form action="" className="p-10">
+      <form action="" className="p-10" onSubmit={sendMail}>
         {/* Name and Email container */}
         <div className="flex flex-col md:flex-row justify-between gap-4 md:gap-8">
           {/* Name */}
@@ -19,6 +52,11 @@ function ContactForm() {
               type="text"
               placeholder="Name"
               className="w-full h-[61px] rounded-[15px] bg-[#D0DBE166] pl-[20px] font-[400] text-[16px]"
+              name="fullName"
+              value={name}
+              onChange={(e) => {
+                setName(e.target.value);
+              }}
             />
           </div>
 
@@ -35,6 +73,11 @@ function ContactForm() {
               type="email"
               placeholder="Email"
               className="w-full h-[61px] rounded-[15px] bg-[#D0DBE166] pl-[20px] font-[400] text-[16px]"
+              name="fullName"
+              value={email}
+              onChange={(e) => {
+                setEmail(e.target.value);
+              }}
             />
           </div>
         </div>
@@ -52,6 +95,11 @@ function ContactForm() {
             type="number"
             placeholder="Phone Number"
             className="w-full h-[61px] rounded-[15px] bg-[#D0DBE166] pl-[20px] font-[400] text-[16px]"
+            name="fullName"
+            value={phoneNumber}
+            onChange={(e) => {
+              setPhoneNumber(e.target.value);
+            }}
           />
         </div>
 
@@ -68,6 +116,11 @@ function ContactForm() {
             type="text"
             placeholder="Subject"
             className="w-full h-[61px] rounded-[15px] bg-[#D0DBE166] pl-[20px] font-[400] text-[16px]"
+            name="fullName"
+            value={subject}
+            onChange={(e) => {
+              setSubject(e.target.value);
+            }}
           />
         </div>
 
@@ -83,6 +136,11 @@ function ContactForm() {
             id="message"
             placeholder="Message"
             className="w-full h-[131px] rounded-[15px] bg-[#D0DBE166] pl-[20px] pt-[20px] font-[400] text-[16px]"
+            name="fullName"
+            value={message}
+            onChange={(e) => {
+              setMessage(e.target.value);
+            }}
           />
         </div>
 

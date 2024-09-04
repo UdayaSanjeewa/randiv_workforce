@@ -1,8 +1,41 @@
-import React from "react";
+"use client";
+import React, { useState } from "react";
 import formBg from "@/resources/form-bg.png";
 import Image from "next/image";
+import { useRouter } from "next/navigation";
+import axios from "axios";
+import { toast } from "react-toastify";
 
 function ApplyForm() {
+  const router = useRouter()
+  const [name, setName] = useState("");
+  const [gender, setGender] = useState("");
+  const [phoneNumber, setPhoneNumber] = useState("");
+  const [experience, setExperience] = useState("");
+  const [message, setMessage] = useState("");
+
+  const sendMail = async (e: any) => {
+    e.preventDefault();
+    const data = {
+      name,
+      gender,
+      phoneNumber,
+      experience,
+      message,
+    };
+
+    await axios.post("/api/applyfrom", data).then((res) => {
+      if (res.data.message) {
+        toast.success("Applyied Successfully");
+        setTimeout(()=>{
+          router.push('/')          
+        }, 300)
+      } else {
+        toast.success("Apply failed, Try again later");
+      }
+    });
+  };
+
   return (
     <div className="relative h-[953px]">
       <Image
@@ -21,7 +54,7 @@ function ApplyForm() {
 
           {/* Form */}
           <div className="w-full max-w-[833px] bg-white rounded-[12px] mt-8 p-6 md:p-10 lg:p-12">
-            <form action="">
+            <form action="" onSubmit={sendMail}>
               {/* Name and Gender Container */}
               <div className="flex flex-col md:flex-row  justify-between md:space-x-4">
                 {/* Name */}
@@ -37,6 +70,11 @@ function ApplyForm() {
                     type="text"
                     placeholder="Name"
                     className="w-full md:w-[320px] h-[61px] rounded-[15px] bg-[#D0DBE166] pl-[20px] font-[400] text-[16px]"
+                    name="fullName"
+                    value={name}
+                    onChange={(e) => {
+                      setName(e.target.value);
+                    }}
                   />
                 </div>
 
@@ -53,6 +91,11 @@ function ApplyForm() {
                     type="text"
                     placeholder="Gender"
                     className="w-full md:w-[320px]  h-[61px] rounded-[15px] bg-[#D0DBE166] pl-[20px] font-[400] text-[16px]"
+                    name="fullName"
+                    value={gender}
+                    onChange={(e) => {
+                      setGender(e.target.value);
+                    }}
                   />
                 </div>
               </div>
@@ -70,6 +113,11 @@ function ApplyForm() {
                   type="text"
                   placeholder="Phone Number"
                   className="w-full h-[61px] rounded-[15px] bg-[#D0DBE166] pl-[20px] font-[400] text-[16px]"
+                  name="fullName"
+                  value={phoneNumber}
+                  onChange={(e) => {
+                    setPhoneNumber(e.target.value);
+                  }}
                 />
               </div>
 
@@ -86,6 +134,11 @@ function ApplyForm() {
                   type="text"
                   placeholder="Working Experience"
                   className="w-full h-[61px] rounded-[15px] bg-[#D0DBE166] pl-[20px] font-[400] text-[16px]"
+                  name="fullName"
+                  value={experience}
+                  onChange={(e) => {
+                    setExperience(e.target.value);
+                  }}
                 />
               </div>
 
@@ -101,6 +154,11 @@ function ApplyForm() {
                   id="message"
                   placeholder="Message"
                   className="w-full h-[131px] rounded-[15px] bg-[#D0DBE166] pl-[20px] pt-[20px] font-[400] text-[16px]"
+                  name="fullName"
+                  value={message}
+                  onChange={(e) => {
+                    setMessage(e.target.value);
+                  }}
                 />
               </div>
 
