@@ -2,11 +2,20 @@ import ContactForm from "@/components/ContactUsPage/ContactForm";
 import Footer from "@/components/Footer";
 import NavBar from "@/components/NavBar";
 import React from "react";
+import * as motion from "framer-motion/client";
+import fadeIn from "../../variants"
 
 function ContactUs() {
   return (
     <>
       <NavBar />
+
+      <motion.div
+        variants={fadeIn("up", 0.3)}  // Using the defined fadeIn variant
+        initial="hidden"              // Initial state is hidden
+        whileInView="show"            // Animation will trigger when in view
+        viewport={{ once: true, amount: 0.4 }}  // Options for when the animation triggers
+      >
 
       <div className="flex flex-col lg:flex-row justify-center items-center lg:items-start gap-10 px-4 mt-10 lg:mt-[100px]">
         {/* Heading and form */}
@@ -26,6 +35,7 @@ function ContactUs() {
         </div>
 
         {/* Contact Information */}
+
         <div className="flex flex-col gap-6 lg:gap-10 w-full max-w-[400px] lg:mt-[280px]">
           <div>
             <p className="text-[22px] md:text-[26px] font-[700]">Address</p>
@@ -48,7 +58,7 @@ function ContactUs() {
           </div>
         </div>
       </div>
-
+      </motion.div>
       <Footer />
     </>
   );
