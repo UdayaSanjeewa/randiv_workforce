@@ -3,12 +3,18 @@ import NavBar from "@/components/NavBar";
 import Image from "next/image";
 import React from "react";
 import IMG from "@/resources/aboutIMG.jpg";
+import * as motion from "framer-motion/client";
 
 function AboutUs() {
   return (
     <div>
       <NavBar />
 
+      <motion.div
+            initial={{ opacity: 0, y: 15 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.25 }}
+          >
       {/* Top part */}
       <div className="w-full flex justify-center p-4">
         <div className="w-full max-w-[1200px]">
@@ -82,6 +88,7 @@ function AboutUs() {
           </div>
         </div>
       </div>
+      </motion.div>
 
       <Footer />
     </div>
@@ -89,3 +96,5 @@ function AboutUs() {
 }
 
 export default AboutUs;
+
+

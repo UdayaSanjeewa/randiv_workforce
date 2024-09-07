@@ -6,6 +6,8 @@ import serveThree from "@/resources/serveThree.jpg";
 import serveFour from "@/resources/serveFour.jpg";
 import Link from "next/link";
 import * as motion from "framer-motion/client";
+import fadeIn from "../../variants"
+
 
 
 function services() {
@@ -13,10 +15,11 @@ function services() {
     <div className="flex items-center justify-center">
       <div className="md:w-[1300px] h-[1500px] md:h-[500px]">
       <motion.div
-            initial={{ opacity: 0, y: 15 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 0.5 }}
-          >
+        variants={fadeIn("up", 0.3)}  // Using the defined fadeIn variant
+        initial="hidden"              // Initial state is hidden
+        whileInView="show"            // Animation will trigger when in view
+        viewport={{ once: true, amount: 0.4 }}  // Options for when the animation triggers
+      >
         {/* Heading */}
         <h2 className="text-[38px] text-center md:text-start mt-[90px] ml-[30px] md:ml-[120px] md:mt-[100px] xl:ml-0 xl:mt-0 font-[700] text-[#21215F] mb-[20px]">
           Services
@@ -109,4 +112,3 @@ function services() {
 
 export default services;
 
-services;
