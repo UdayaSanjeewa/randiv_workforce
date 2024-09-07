@@ -26,12 +26,7 @@ function HeroSection() {
               Welcome to Randiv Work Force
             </h2>
             <p className="xl:w-[734px] pl-5 pr-5 xl:pl-0 xl:pr-0 mt-[20px]  xl:h-[192px] md:text-[22px] font-[400] xl:mt-[50px]">
-              At Randiv Work Force, we specialize in bridging the gap between
-              skilled professionals and global employment opportunities. Whether
-              you area dedicated nurse orCare Giver lookingto make a difference
-              in UK Care Homes/Hospitals or an ambitious professional eager to
-              explore opportunities in Japan, New Zealand, or across Europe, we
-              are here to make your dreams a reality.
+            At Randiv Workforce, we specialize in bridging the gap between skilled professionals and global employment opportunities. Whether you are a dedicated nurse or caregiver looking to make a difference in UK care homes and hospitals, or an ambitious professional eager to explore opportunities in Japan, New Zealand, or across Europe, we are here to help make your dreams a reality.
             </p>
           </motion.div>
         </div>
