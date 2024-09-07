@@ -3,12 +3,20 @@ import NavBar from "@/components/NavBar";
 import Image from "next/image";
 import React from "react";
 import PortIMG from "@/resources/portfolioIMG.jpg";
+import * as motion from "framer-motion/client";
+import fadeIn from "../../variants"
 
 function Portfolio() {
   return (
     <>
       <NavBar />
-
+      
+      <motion.div
+        variants={fadeIn("up", 0.3)}  // Using the defined fadeIn variant
+        initial="hidden"              // Initial state is hidden
+        whileInView="show"            // Animation will trigger when in view
+        viewport={{ once: true, amount: 0.4 }}  // Options for when the animation triggers
+      >
       {/* Top */}
       <div className="w-full flex flex-col lg:flex-row justify-center items-center gap-10 lg:gap-[90px] h-auto lg:h-[500px] mt-[60px] px-4">
         <div>
@@ -34,6 +42,7 @@ function Portfolio() {
       </div>
 
       {/* Mid */}
+      
       <div className="flex justify-center h-auto lg:h-[650px] px-4 mt-10 lg:mt-0">
         <div className="w-full max-w-[1200px] flex flex-col gap-8">
           {/* Tag 01 */}
@@ -66,8 +75,15 @@ function Portfolio() {
           </p>
         </div>
       </div>
+      </motion.div>
 
       {/* Bottom */}
+      <motion.div
+        variants={fadeIn("up", 0.3)}  // Using the defined fadeIn variant
+        initial="hidden"              // Initial state is hidden
+        whileInView="show"            // Animation will trigger when in view
+        viewport={{ once: true, amount: 0.4 }}  // Options for when the animation triggers
+      >
       <div className="flex justify-center py-10 lg:py-20 px-4">
         <div className="w-full max-w-[1300px]">
           <h2 className="text-[28px] md:text-[32px] lg:text-[40px] text-center font-[700] text-[#21215F]">
@@ -119,6 +135,7 @@ function Portfolio() {
           </div>
         </div>
         </div>
+        </motion.div>
 
 
       <Footer />
