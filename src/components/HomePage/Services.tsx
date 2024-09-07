@@ -5,17 +5,25 @@ import serveTwo from "@/resources/serveTwo.jpg";
 import serveThree from "@/resources/serveThree.jpg";
 import serveFour from "@/resources/serveFour.jpg";
 import Link from "next/link";
+import * as motion from "framer-motion/client";
+
 
 function services() {
   return (
     <div className="flex items-center justify-center">
       <div className="md:w-[1300px] h-[1500px] md:h-[500px]">
+      <motion.div
+            initial={{ opacity: 0, y: 15 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.5 }}
+          >
         {/* Heading */}
         <h2 className="text-[38px] text-center md:text-start mt-[90px] ml-[30px] md:ml-[120px] md:mt-[100px] xl:ml-0 xl:mt-0 font-[700] text-[#21215F] mb-[20px]">
           Services
         </h2>
 
         {/* Cards */}
+        
         <div className="flex flex-col gap-8 md:gap-0 md:flex-row items-center md:justify-around xl:justify-between p-10 md:p-0">
           {/* Card 01 */}
           <Link href="/Services" className="relative w-[240px] h-[260px] md:w-[190px] md:h-[220px] xl:w-[283px] xl:h-[290px]">
@@ -93,6 +101,7 @@ function services() {
             </div>
           </Link>
         </div>
+        </motion.div>
       </div>
     </div>
   );
