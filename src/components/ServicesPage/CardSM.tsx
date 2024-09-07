@@ -1,6 +1,8 @@
 "use client";
 import React, { useState } from "react";
 import Image from "next/image";
+import * as motion from "framer-motion/client";
+import fadeIn from "../../variants";
 
 function CardSM(props: any) {
   const [isExpanded, setIsExpanded] = useState(false);
@@ -12,8 +14,14 @@ function CardSM(props: any) {
   // Split the content into an array of words
   const words = props.content.split(" ");
 
-  // Join the first 50 words back into a string
+  // Join the first 20 words back into a string
   const truncatedContent = words.slice(0, 20).join(" ");
+
+  // Define variants for the expanding/collapsing section
+  const expandVariants = {
+    collapsed: { height: 0, opacity: 0, overflow: "hidden" },
+    expanded: { height: "auto", opacity: 1 },
+  };
 
   return (
     <div className="flex flex-col gap-[20px] md:gap-[30px] mb-[40px] md:mb-[70px] w-full max-w-[350px] md:max-w-[600px] mx-auto bg-white shadow-lg rounded-[10px] ">
@@ -35,39 +43,42 @@ function CardSM(props: any) {
           {isExpanded ? props.content : `${truncatedContent}...`}
         </p>
 
-        {/* Facilities Section - Always shown */}
-        <div
-          className={`flex flex-col gap-4 ${
-            isExpanded ? "flex" : "hidden"
-          } p-5`}
+        {/* Facilities Section - Expandable content */}
+        <motion.div
+          initial="collapsed"
+          animate={isExpanded ? "expanded" : "collapsed"}
+          variants={expandVariants}
+          transition={{ duration: 0.5 }} // Animation duration
         >
-          <div className="flex flex-col md:flex-row gap-[10px] md:gap-[15px]">
-            <div className="w-full max-w-[200px] h-[40px] text-white font-[700] text-[12px] md:text-[14px] bg-[#21215F] rounded-[12px] flex justify-center items-center mx-auto">
-              {props.facilityOne}
+          <div className="flex flex-col gap-4 p-5">
+            <div className="flex flex-col md:flex-row gap-[10px] md:gap-[15px]">
+              <div className="w-full max-w-[200px] h-[40px] text-white font-[700] text-[12px] md:text-[14px] bg-[#21215F] rounded-[12px] flex justify-center items-center mx-auto">
+                {props.facilityOne}
+              </div>
+              <p className="text-[12px] md:text-[14px] font-[400] text-center md:text-left">
+                {props.facilityOneContent}
+              </p>
             </div>
-            <p className="text-[12px] md:text-[14px] font-[400] text-center md:text-left">
-              {props.facilityOneContent}
-            </p>
-          </div>
-          <div className="flex flex-col md:flex-row gap-[10px] md:gap-[15px]">
-            <div className="w-full max-w-[200px] h-[40px] text-white font-[700] text-[12px] md:text-[14px] bg-[#21215F] rounded-[12px] flex justify-center items-center mx-auto">
-              {props.facilityTwo}
+            <div className="flex flex-col md:flex-row gap-[10px] md:gap-[15px]">
+              <div className="w-full max-w-[200px] h-[40px] text-white font-[700] text-[12px] md:text-[14px] bg-[#21215F] rounded-[12px] flex justify-center items-center mx-auto">
+                {props.facilityTwo}
+              </div>
+              <p className="text-[12px] md:text-[14px] font-[400] text-center md:text-left">
+                {props.facilityTwoContent}
+              </p>
             </div>
-            <p className="text-[12px] md:text-[14px] font-[400] text-center md:text-left">
-              {props.facilityTwoContent}
-            </p>
-          </div>
-          <div className="flex flex-col md:flex-row gap-[10px] md:gap-[15px]">
-            <div className="w-full max-w-[200px] h-[40px] text-white font-[700] text-[12px] md:text-[14px] bg-[#21215F] rounded-[12px] flex justify-center items-center mx-auto">
-              {props.facilityThree}
+            <div className="flex flex-col md:flex-row gap-[10px] md:gap-[15px]">
+              <div className="w-full max-w-[200px] h-[40px] text-white font-[700] text-[12px] md:text-[14px] bg-[#21215F] rounded-[12px] flex justify-center items-center mx-auto">
+                {props.facilityThree}
+              </div>
+              <p className="text-[12px] md:text-[14px] font-[400] text-center md:text-left">
+                {props.facilityThreeContent}
+              </p>
             </div>
-            <p className="text-[12px] md:text-[14px] font-[400] text-center md:text-left">
-              {props.facilityThreeContent}
-            </p>
           </div>
-        </div>
+        </motion.div>
 
-        {/* Show "See More" button only on small and medium screens */}
+        {/* Show "See More" button */}
         <button
           className="mt-3 text-[#21215F] font-[700] text-[14px] md:text-[16px] underline pb-5"
           onClick={handleSeeMore}
