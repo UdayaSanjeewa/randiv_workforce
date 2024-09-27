@@ -84,7 +84,7 @@ function Portfolio() {
         whileInView="show"            // Animation will trigger when in view
         viewport={{ once: true, amount: 0.4 }}  // Options for when the animation triggers
       >
-      <div className="flex justify-center py-10 lg:py-20 px-4">
+      <div className="flex justify-center py-10 lg:py-20 px-4 lg:px-28">
         <div className="w-full max-w-[1300px]">
           <h2 className="text-[28px] md:text-[32px] lg:text-[40px] text-center font-[700] text-[#21215F]">
             Our Impact in Numbers
@@ -93,7 +93,7 @@ function Portfolio() {
           <div className="flex flex-col lg:flex-row w-full max-w-[1200px] justify-between mt-10 lg:mt-[80px] mb-10 lg:mb-[80px] gap-10">
             {/* Impact 01 */}
             <div className="flex flex-col lg:flex-row items-center justify-center gap-5 lg:gap-[50px]">
-              <div className="w-[100px] md:w-[129px] h-[100px] bg-[#21215F] text-white text-[36px] md:text-[44px] rounded-[20px] flex items-center justify-center">
+              <div className="w-[100px] md:w-[129px] h-[100px] bg-[#21215F] text-white lg:min-w-[120px] text-[36px] md:text-[44px] rounded-[20px] flex items-center justify-center">
                 <p>50+</p>
               </div>
               <div className="text-[18px] md:text-[24px] font-[400] text-center lg:text-left max-w-[364px]">
@@ -103,7 +103,7 @@ function Portfolio() {
 
             {/* Impact 02 */}
             <div className="flex flex-col lg:flex-row items-center justify-center gap-5 lg:gap-[50px]">
-              <div className="w-[100px] md:w-[129px] h-[100px] bg-[#21215F] text-white text-[36px] md:text-[44px] rounded-[20px] flex items-center justify-center">
+              <div className="w-[100px] md:w-[129px] h-[100px] bg-[#21215F] text-white lg:min-w-[120px] text-[36px] md:text-[44px] rounded-[20px] flex items-center justify-center">
                 <p>50+</p>
               </div>
               <div className="text-[18px] md:text-[24px] font-[400] text-center lg:text-left max-w-[364px]">
@@ -115,7 +115,7 @@ function Portfolio() {
             <div className="flex flex-col lg:flex-row w-full max-w-[1200px] justify-between mt-10 lg:mt-[80px] mb-10 lg:mb-[80px] gap-10">
             {/* Impact 03 */}
             <div className="flex flex-col lg:flex-row items-center justify-center gap-5 lg:gap-[50px]">
-              <div className="w-[100px] md:w-[129px] h-[100px] bg-[#21215F] text-white text-[36px] md:text-[44px] rounded-[20px] flex items-center justify-center">
+              <div className="w-[100px] md:w-[129px] h-[100px] bg-[#21215F] text-white lg:min-w-[120px] text-[36px] md:text-[44px] rounded-[20px] flex items-center justify-center">
                 <p>50+</p>
               </div>
               <div className="text-[18px] md:text-[24px] font-[400] text-center lg:text-left max-w-[364px]">
@@ -125,7 +125,7 @@ function Portfolio() {
 
             {/* Impact 04 */}
             <div className="flex flex-col lg:flex-row items-center justify-center gap-5 lg:gap-[50px]">
-              <div className="w-[100px] md:w-[129px] h-[100px] bg-[#21215F] text-white text-[36px] md:text-[44px] rounded-[20px] flex items-center justify-center">
+              <div className="w-[100px] md:w-[129px] h-[100px] bg-[#21215F] text-white lg:min-w-[120px] text-[36px] md:text-[44px] rounded-[20px] flex items-center justify-center">
                 <p>100%</p>
               </div>
               <div className="text-[18px] md:text-[24px] font-[400] text-center lg:text-left max-w-[364px]">

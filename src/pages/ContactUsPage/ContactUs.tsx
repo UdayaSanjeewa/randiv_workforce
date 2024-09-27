@@ -21,7 +21,7 @@ function ContactUs() {
         viewport={{ once: true, amount: 0.4 }}  // Options for when the animation triggers
       >
 
-      <div className="flex flex-col lg:flex-row justify-center items-center lg:items-start gap-10 px-4 mt-10 lg:mt-[100px]">
+      <div className="flex flex-col lg:flex-row justify-center items-center  lg:items-start gap-10 px-4 lg:px-20 xl:px-32 mt-10 lg:mt-[100px]">
         {/* Heading and form */}
         <div className="w-full max-w-[1000px] h-auto lg:h-[1300px]">
           {/* heading */}
@@ -50,11 +50,12 @@ function ContactUs() {
             <p className="text-[22px] md:text-[26px] font-[700] flex items-center gap-3 text-[#21215F]"> <IoLocationSharp /> Address</p>
             <p className="text-[18px] md:text-[22px] font-[400] mt-2 ml-[60px]">
               Randiv WorkforceForeign Employment <br />
-              Solution(pvt) ltd no 104, <br />
+              Solution(pvt) ltd<br />
+              no 104, <br />
               3rd floor, <br />
               Sanasa Ward City, <br />
-              Queen Marry Road, Gampaha, <br />
-              Sri Lanka.
+              Queen Marry Road, <br />
+              Gampaha Sri Lanka.
             </p>
           </div>
 
